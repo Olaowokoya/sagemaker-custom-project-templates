@@ -29,14 +29,14 @@ pipeline_env = cdk.Environment(account=PIPELINE_ACCOUNT, region=DEFAULT_DEPLOYME
 CodeCommitStack(app, "ml-infra-cc-repo", env=pipeline_env)
 PipelineStack(app, "ml-infra-deploy-pipeline", env=pipeline_env)
 
-# Personal Stacks for testing locally, comment out when committing to repository
-if not os.getenv("CODEBUILD_BUILD_ARN"):
-    CoreStage(
-        app,
-        "Personal",  ## change this to another stack name when doing local tests
-        deploy_sm_domain=True,  ## change this to False if you only want to deploy the VPC stack
-        env=pipeline_env,
-    )
+# # Personal Stacks for testing locally, comment out when committing to repository
+# if not os.getenv("CODEBUILD_BUILD_ARN"):
+#     CoreStage(
+#         app,
+#         "Personal",  ## change this to another stack name when doing local tests
+#         deploy_sm_domain=True,  ## change this to False if you only want to deploy the VPC stack
+#         env=pipeline_env,
+#     )
 
 
 app.synth()

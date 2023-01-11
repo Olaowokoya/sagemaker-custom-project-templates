@@ -18,13 +18,13 @@
 CODE_COMMIT_REPO_NAME = "mlops-sm-project-template"
 PIPELINE_BRANCH = "main"
 
-PIPELINE_ACCOUNT = ""  # account used to host the pipeline handling updates of this repository
+PIPELINE_ACCOUNT = "101186769107"  # account used to host the pipeline handling updates of this repository
 
-DEV_ACCOUNT = ""  # account to host the service catalog template
+DEV_ACCOUNT = "101186769107"  # account to host the service catalog template
 
 PREPROD_ACCOUNT = ""  # account used to deploy the endpoint
 
 PROD_ACCOUNT = ""  # account used to deploy the endpoint
 
-DEFAULT_DEPLOYMENT_REGION = "eu-west-1"
+DEFAULT_DEPLOYMENT_REGION = "us-east-1"
 APP_PREFIX = "mlops-cdk"

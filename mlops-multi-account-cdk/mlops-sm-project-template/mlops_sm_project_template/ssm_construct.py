@@ -23,8 +23,8 @@ from constructs import Construct
 
 from mlops_sm_project_template.config.constants import (
     DEV_ACCOUNT,
-    PREPROD_ACCOUNT,
-    PROD_ACCOUNT,
+    # PREPROD_ACCOUNT,
+    # PROD_ACCOUNT,
     DEFAULT_DEPLOYMENT_REGION,
 )
 
@@ -43,32 +43,32 @@ class SSMConstruct(Construct):
             string_value=DEV_ACCOUNT,
         )
 
-        # PREPROD parameters
-        PREPROD_ACCOUNT_id_param = ssm.StringParameter(
-            self,
-            "PreProdAccountIDParameter",
-            parameter_name="/mlops/preprod/account_id",
-            string_value=PREPROD_ACCOUNT,
-        )
+        # # PREPROD parameters
+        # PREPROD_ACCOUNT_id_param = ssm.StringParameter(
+        #     self,
+        #     "PreProdAccountIDParameter",
+        #     parameter_name="/mlops/preprod/account_id",
+        #     string_value=PREPROD_ACCOUNT,
+        # )
 
-        PREPROD_REGION_param = ssm.StringParameter(
-            self,
-            "PreProdRegionParameter",
-            parameter_name="/mlops/preprod/region",
-            string_value=DEFAULT_DEPLOYMENT_REGION,
-        )
+        # PREPROD_REGION_param = ssm.StringParameter(
+        #     self,
+        #     "PreProdRegionParameter",
+        #     parameter_name="/mlops/preprod/region",
+        #     string_value=DEFAULT_DEPLOYMENT_REGION,
+        # )
 
-        # PROD parameters
-        prod_account_id_param = ssm.StringParameter(
-            self,
-            "ProdAccountIDParameter",
-            parameter_name="/mlops/prod/account_id",
-            string_value=PROD_ACCOUNT,
-        )
+        # # PROD parameters
+        # prod_account_id_param = ssm.StringParameter(
+        #     self,
+        #     "ProdAccountIDParameter",
+        #     parameter_name="/mlops/prod/account_id",
+        #     string_value=PROD_ACCOUNT,
+        # )
 
-        prod_region_param = ssm.StringParameter(
-            self,
-            "ProdRegionParameter",
-            parameter_name="/mlops/prod/region",
-            string_value=DEFAULT_DEPLOYMENT_REGION,
-        )
+        # prod_region_param = ssm.StringParameter(
+        #     self,
+        #     "ProdRegionParameter",
+        #     parameter_name="/mlops/prod/region",
+        #     string_value=DEFAULT_DEPLOYMENT_REGION,
+        # )
